@@ -41,7 +41,7 @@ fun MainPreview() {
     DevicesTheme {
         MainView(
             Modifier.padding(top = 30.dp), listOf(
-                Device(id = 1, name = "Nexus", data = Specs(color = "Black", capacity = "64 GB")),
+                Device(id = 1, name = "Nexus", data = Specs(color = "Black", capacity = "64 GB",price = 100.0)),
                 Device(id = 2, name = "Galaxy", data = null)
             )
         )

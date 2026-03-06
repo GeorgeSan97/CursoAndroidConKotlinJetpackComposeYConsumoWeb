@@ -29,14 +29,23 @@ fun DeviceItemView(device: Device) {
             style = Typography.headlineMedium
             )
             if (device.data?.color != null) {
-                Text(text = device.data?.color ?: "-",
+                Text(text = device.data.color,
                     style = Typography.bodySmall)
             }
 
-            if (device.data?.color != null) {
-                Text(text = device.data?.capacity ?: "-",
+            if (device.data?.capacity != null) {
+                Text(text = device.data.capacity ,
                     style = Typography.bodySmall)
             }
+
+            if (device.data?.price != null) {
+                Text(text = "${device.data.price}",
+                    style = Typography.bodySmall)
+            }
+
+
+
+
 
 
 //            Text(text = device.data?.color ?: "-",
@@ -54,7 +63,7 @@ fun DeviceItemView(device: Device) {
 fun DeviceItemPreview() {
     DevicesTheme {
         DeviceItemView(
-            device = Device(id = 1, name = "Nexus", data = Specs(color = "Black", capacity = "64 GB"))
+            device = Device(id = 1, name = "Nexus", data = Specs(color = "Black", capacity = "64 GB", price = 100.0))
         )
     }
 }
